@@ -32,4 +32,6 @@ feature 'Admin register company' do
     expect(page).to have_content (Company.last.social_networks)
 
   end
+
+  
 end
