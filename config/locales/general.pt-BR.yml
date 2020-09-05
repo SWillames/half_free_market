@@ -1,0 +1,8 @@
+pt-BR:
+  notice:
+    register:
+      title: '%{model} cadastrado com sucesso!'
+    updater:
+      title: '%{model} atualizado com sucesso!'
+    eraser:
+      title: '%{model} deletado com sucesso!'

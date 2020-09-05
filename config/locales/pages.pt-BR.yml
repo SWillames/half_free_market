@@ -1,0 +1,8 @@
+pt-BR:
+  home:
+    index:
+      title: 'Seja Bemvindo'
+    link: 
+      register: 
+        company: 'Cadastre aqui sua empresa!'
+        user: 'Faça aqui seu cadastro'
