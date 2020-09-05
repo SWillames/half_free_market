@@ -13,11 +13,14 @@ gem 'jbuilder', '~> 2.7'
 gem 'devise'
 gem 'cpf_cnpj'
 gem 'bootsnap', '>= 1.4.2', require: false
+gem 'faker'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails', '~> 4.0.1'
   gem 'capybara'
+  gem 'shoulda-matchers'
+  gem 'factory_bot_rails'
 end
 
 group :development do
