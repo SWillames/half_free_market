@@ -12,3 +12,6 @@ pt-BR:
         domain: 'Dominio'
         address: 'Endereço'
         social_networks: 'Redes sociais'
+    error:
+      personalized:
+        format: 'Formato aceito: **.***.***/****-**'
