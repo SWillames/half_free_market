@@ -5,13 +5,13 @@ feature 'Admin register company' do
     visit root_path
 
     click_on 'Empresas'
-    
+    click_on 'Novo'
     fill_in 'Nome', with: "Hirthe-Ritchie"
     fill_in 'Razão Social', with: "Hirthe-Ritchie S/A"
     fill_in 'CNPJ', with: "18.553.414/0006-18"
     fill_in 'Endereço', with: "Av. Bucar Neto, 127"
     fill_in 'Dominio', with: "@hir-rit.com"
-    fill_in 'Redes Sociais', with: "@hir-rit"
+    fill_in 'Redes sociais', with: "@hir-rit"
 
     click_on 'Enviar'
 
@@ -29,5 +29,27 @@ feature 'Admin register company' do
     expect(page).to have_content (Company.last.address)
     expect(page).to have_content t('activerecord.attributes.company.social_networks')+':'
     expect(page).to have_content (Company.last.social_networks)
-  end  
+  end
+
+  scenario 'cnpj must be unique' do
+    company = create(:company)
+    company1 = create(:company)
+
+    visit root_path
+    click_on 'Empresas'
+    click_on 'Novo'
+
+    fill_in 'Nome', with: company1.name
+    fill_in 'Razão Social', with: company1.corporate_name
+    fill_in 'CNPJ', with: company.cnpj
+    fill_in 'Dominio', with: company1.domain
+    fill_in 'Endereço', with: company1.address
+    fill_in 'Redes sociais', with: company1.social_networks
+    puts company.cnpj
+    click_on 'Enviar'
+    expect(page).to have_content('CNPJ já está em uso')
+    
+    
+  end
+
 end
