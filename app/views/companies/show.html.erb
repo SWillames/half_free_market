@@ -25,3 +25,4 @@
   <strong><%= t('activerecord.attributes.company.social_networks') %>:</strong>
   <%= @company.social_networks %>
 </p>
+<%= link_to 'Apagar', company_path(@company), method: :delete, data: { comfirm: 'Tem certeza que deseja apagar?' } %>
