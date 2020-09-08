@@ -1,25 +1,5 @@
-<h1><%= t('actions.new') %> <%= @company.model_name.human%> </h1> 
+<h1><%= t('actions.new') %> <%= t('activerecord.models.company.one')%> </h1> 
 
-<%= form_with model: @company, local: true do |f|%>
+<%= render 'form', company: @company %>
 
-    <%= f.label :name%>
-    <%= f.text_field :name%>
-
-    <%= f.label :corporate_name %>
-    <%= f.text_field :corporate_name %>
-
-    <%= f.label :cnpj %>
-    <%= f.text_field :cnpj %>
-
-    <%= f.label :address %>
-    <%= f.text_field :address %>
-
-    <%= f.label :social_networks%>
-    <%= f.text_field :social_networks%>
-
-    <%= f.label :domain%>
-    <%= f.text_field :domain%>  
-
-    <%= f.submit "#{t 'helpers.submit.create'}" %>
-
-<% end %>
+<%= link_to "#{t 'actions.back'}", companies_path%>

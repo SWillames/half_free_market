@@ -1,0 +1,6 @@
+<h1><%= t('actions.edit') %> <%= t('activerecord.models.company.one') %></h1>
+
+<%= render 'form', company: @company %> 
+
+<%= link_to "#{t 'actions.show'}", @company %>
+<%= link_to "#{t 'actions.back'}", @company_path %>
