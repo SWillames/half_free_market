@@ -2,16 +2,17 @@ pt-BR:
   activerecord:
     models:
       company: 
-        one: 'Empresa'
-        other: 'Empresas'
+        one: Empresa
+        other: Empresas
     attributes:
       company:
-        name: 'Nome'
-        corporate_name: 'Razão Social'
-        cnpj: 'CNPJ'
-        domain: 'Dominio'
-        address: 'Endereço'
-        social_networks: 'Redes sociais'
+        name: Nome
+        corporate_name: Razão Social
+        cnpj: CNPJ
+        domain: Dominio
+        address: Endereço
+        social_networks: Redes sociais
     error:
       personalized:
-        format: 'Formato aceito: **.***.***/****-**'
+        format: 
+          Formato aceito: '**.***.***/****-**'
