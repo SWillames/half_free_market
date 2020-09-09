@@ -5,6 +5,7 @@ feature 'Admin edits company' do
     company = create(:company)
     visit root_path
     click_on 'Empresas'
+    click_on  company.name
     click_on 'Editar'
     
     expect(page).to  have_current_path(/companies\/[0-9]+/)
@@ -28,9 +29,10 @@ feature 'Admin edits company' do
   end
 
   scenario 'attributes cannot be blank' do
-    @company = create(:company)
+    company = create(:company)
     visit root_path
     click_on 'Empresas'
+    click_on  company.name
     click_on 'Editar'
     fill_in 'Nome', with: ''
     fill_in 'Razão Social', with: ''
